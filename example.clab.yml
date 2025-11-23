@@ -1,11 +1,11 @@
-name: srlceos01
+name: srlceos01 # name of topology
 
 topology:
   nodes:
-    srl:
+    srl: #name of 1st node
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux
-    ceos:
+    ceos: #name of 2nd node
       kind: arista_ceos
       image: ceos:4.32.0F
 
