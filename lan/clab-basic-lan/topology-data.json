@@ -1,0 +1,100 @@
+{
+  "name": "basic-lan",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-dd38d20b86fd",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "linux1": {
+      "index": "0",
+      "shortname": "linux1",
+      "longname": "clab-basic-lan-linux1",
+      "fqdn": "linux1.basic-lan.io",
+      "group": "",
+      "labdir": "/home/nokkov/clabs/lan/clab-basic-lan/linux1",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-dd38d20b86fd",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/nokkov/clabs/lan/clab-basic-lan/linux1",
+        "clab-node-longname": "clab-basic-lan-linux1",
+        "clab-node-name": "linux1",
+        "clab-node-type": "",
+        "clab-owner": "nokkov",
+        "clab-topo-file": "/home/nokkov/clabs/lan/basic-lan.clab.yml",
+        "containerlab": "basic-lan"
+      },
+      "port-bindings": [
+      ]
+    },
+    "linux2": {
+      "index": "1",
+      "shortname": "linux2",
+      "longname": "clab-basic-lan-linux2",
+      "fqdn": "linux2.basic-lan.io",
+      "group": "",
+      "labdir": "/home/nokkov/clabs/lan/clab-basic-lan/linux2",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-dd38d20b86fd",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/nokkov/clabs/lan/clab-basic-lan/linux2",
+        "clab-node-longname": "clab-basic-lan-linux2",
+        "clab-node-name": "linux2",
+        "clab-node-type": "",
+        "clab-owner": "nokkov",
+        "clab-topo-file": "/home/nokkov/clabs/lan/basic-lan.clab.yml",
+        "containerlab": "basic-lan"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "linux1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ea:f8:3f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "linux2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:7a:18:89",
+        "peer": "a"
+      }
+    }
+  ]
+}

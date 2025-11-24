@@ -1,0 +1,13 @@
+name: srlceos01 # name of topology
+
+topology:
+  nodes:
+    srl: #name of 1st node
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+    ceos: #name of 2nd node
+      kind: arista_ceos
+      image: ceos:4.32.0F
+
+  links:
+    - endpoints: ["srl:e1-1", "ceos:eth1"]

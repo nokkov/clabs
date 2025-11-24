@@ -1,0 +1,14 @@
+name: basic-lan
+
+topology:
+
+  nodes:
+    linux1:
+      kind: linux
+      image: alpine:latest
+    linux2:
+      kind: linux
+      image: alpine:latest
+
+  links: 
+  - endpoints: ["linux1:eth1", "linux2:eth1"]
