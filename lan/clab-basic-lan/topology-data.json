@@ -5,13 +5,11 @@
     "config": {
       "prefix": "clab",
       "mgmt": {
-        "network": "clab",
-        "bridge": "br-dd38d20b86fd",
-        "ipv4-subnet": "172.20.20.0/24",
-        "ipv4-gw": "172.20.20.1",
-        "ipv6-subnet": "3fff:172:20:20::/64",
-        "ipv6-gw": "3fff:172:20:20::1",
-        "mtu": 1500,
+        "network": "user-defined-network",
+        "bridge": "br-8a234eb8fb34",
+        "ipv4-subnet": "192.168.1.0/24",
+        "ipv4-gw": "192.168.1.1",
+        "ipv6-gw": "fe80::42:a3ff:feb7:459e",
         "external-access": true
       }
     }
@@ -29,13 +27,13 @@
       "image": "alpine:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-address": "192.168.1.11",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::3",
-      "mgmt-ipv6-prefix-length": 64,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-dd38d20b86fd",
+        "clab-mgmt-net-bridge": "br-8a234eb8fb34",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/nokkov/clabs/lan/clab-basic-lan/linux1",
@@ -60,13 +58,13 @@
       "image": "alpine:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-address": "192.168.1.12",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::2",
-      "mgmt-ipv6-prefix-length": 64,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-dd38d20b86fd",
+        "clab-mgmt-net-bridge": "br-8a234eb8fb34",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/nokkov/clabs/lan/clab-basic-lan/linux2",
@@ -86,13 +84,13 @@
       "a": {
         "node": "linux1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:ea:f8:3f",
+        "mac": "aa:c1:ab:49:49:c4",
         "peer": "z"
       },
       "z": {
         "node": "linux2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:7a:18:89",
+        "mac": "aa:c1:ab:c0:c2:1c",
         "peer": "a"
       }
     }
